@@ -1,3 +1,7 @@
+let count = 1;
+let computer = 0;
+let player = 0
+
 function getComputerChoice() {
     let options = {one: 'rock', two: 'paper', three: 'scissors'};
     let values = Object.values(options);
@@ -7,13 +11,9 @@ function getComputerChoice() {
 }
 
 function play(playerSelection, computerSelection) {
-    // let computer = getComputerChoice();
-    let count = 1;
-    let computer = 0;
-    let player = 0;
     if (playerSelection === computerSelection) {
-        console.log(computer = 0);
-        console.log(player = 0);
+        console.log("Computer " + (computer = 0));
+        console.log("Player " + (player = 0));
         return (
             'Tie game'
             
@@ -22,29 +22,35 @@ function play(playerSelection, computerSelection) {
     }
 
     if (playerSelection === 'rock' && computerSelection != 'scissors') {
-        console.log(computer += count);
-        console.log(player = 0);
+        console.log("Computer: " + (computer += count));
+        console.log("Player: " + (player = 0));
         return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
     }
     else if (playerSelection === 'paper' && computerSelection != 'rock') {
-        console.log(computer += count);
-        console.log(player = 0);
+        console.log("Computer: " + (computer += count));
+        console.log("Player: " + (player = 0));
         return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`)
 
 
     }
     else if (playerSelection === 'scissors' && computerSelection != 'paper') {
-        console.log(computer += count);
-        console.log(player = 0);
+        console.log("Computer: " + (computer += count));
+        console.log("Player: " + (player = 0));
         return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
 
 
     }
     else {
-        console.log(player += count);
-        console.log(computer = 0);
+        console.log("Player: " + (player += count));
+        console.log("Computer: " + (computer = 0));
         return ("You win! " + `${playerSelection}` + " defeats " + `${computerSelection}`);
     }
+
+    
+    
+
+
+    
   
 
 }
@@ -62,8 +68,26 @@ function game() {
         
         
     }
+
+    return results(computer, player);
+    
     // return play(playerSelection, computerSelection);
 }
+
+function results(computer, player) {
+    for(let i = 0; i < 5; i++) {
+
+    }
+    if (player > computer) {
+        console.log('You Won');
+    } else {
+        console.log('You lost')
+    }
+
+};
+
+
+
 
 // const playerSelection = "rock";
 // const computerSelection = getComputerChoice();
