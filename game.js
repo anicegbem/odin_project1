@@ -76,9 +76,6 @@ function game() {
 }
 
 function results(computer, player) {
-    for(let i = 0; i < 5; i++) {
-
-    }
     if (player > computer) {
         console.log('You Won');
     } else {
