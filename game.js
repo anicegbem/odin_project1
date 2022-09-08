@@ -61,6 +61,7 @@ function play(playerSelection, computerSelection) {
 function game() {
     for(let i = 0; i < 5; i++) {
         playerSelection = prompt("Enter either rock, paper or scissors");
+        playerSelection.toLowerCase();
         computerSelection = getComputerChoice();
         console.log(play(playerSelection, computerSelection));
         continue;
