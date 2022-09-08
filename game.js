@@ -12,8 +12,8 @@ function getComputerChoice() {
 
 function play(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        console.log("Computer " + (computer = 0));
-        console.log("Player " + (player = 0));
+        // console.log("Computer " + (computer = 0));
+        // console.log("Player " + (player = 0));
         return (
             'Tie game'
             
