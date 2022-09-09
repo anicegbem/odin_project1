@@ -12,7 +12,6 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
 
-
     if (playerSelection === computerSelection) {
         // console.log("Computer " + (computer = 0));
         // console.log("Player " + (player = 0));
@@ -23,23 +22,23 @@ function playRound(playerSelection, computerSelection) {
         )
     }
 
-    else if (playerSelection === 'rock' && computerSelection != 'scissors') {
+    else if (playerSelection === 'rock' && computerSelection !== 'scissors') {
         console.log("Computer: " + (computer += count));
-        console.log("Player: " + (player = 0));
+        console.log("Player: " + (player += player));
         // return (computer += count);
         return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
     }
-    else if (playerSelection === 'paper' && computerSelection != 'rock') {
+    else if (playerSelection === 'paper' && computerSelection !== 'rock') {
         console.log("Computer: " + (computer += count));
-        console.log("Player: " + (player = 0));
+        console.log("Player: " + (player += player));
         // return (computer += count);
         return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`)
 
 
     }
-    else if (playerSelection === 'scissors' && computerSelection != 'paper') {
+    else if (playerSelection === 'scissors' && computerSelection !== 'paper') {
         console.log("Computer: " + (computer += count));
-        console.log("Player: " + (player = 0));
+        console.log("Player: " + (player += player));
         // return (computer += count);
         return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
 
@@ -47,29 +46,25 @@ function playRound(playerSelection, computerSelection) {
     }
     else {
         console.log("Player: " + (player += count));
-        console.log("Computer: " + (computer = 0));
+        console.log("Computer: " + (computer += computer));
         // return (player += count)
         return ("You win! " + `${playerSelection}` + " defeats " + `${computerSelection}`);
     }
-
     
-        
-        
-
-        
     
-        
-    
-        
-
     
   
 
 };
 
-function score() {
-    
-}
+/*function score(computer, player) {
+    let playerScore;
+    let computerScore;
+    return function add() {
+        playerScore += player;
+        computerScore += computer;
+    };
+} */
 
 
 
@@ -79,7 +74,7 @@ function game() {
         playerSelection = prompt("Enter either rock, paper or scissors");
         playerSelection.toLowerCase();
         computerSelection = getComputerChoice();
-        console.log(play(playerSelection, computerSelection));
+        console.log(playRound(playerSelection, computerSelection));
         continue;
         
         
@@ -87,6 +82,7 @@ function game() {
     }
 
     return results(computer, player);
+   
     
     // return play(playerSelection, computerSelection);
 }
@@ -97,10 +93,15 @@ function results(computer, player) {
     } else if (player === computer) {
         console.log('Draw Game');
     } else {
-        console.log('You Won');
+        console.log('You Lose');
     }
 
 };
+
+function reset() {
+    computer = 0;
+    player = 0;
+}
 
 
 
