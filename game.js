@@ -10,7 +10,7 @@ function getComputerChoice() {
     
 }
 
-function play(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
 
 
     if (playerSelection === computerSelection) {
@@ -65,6 +65,10 @@ function play(playerSelection, computerSelection) {
     
   
 
+};
+
+function score() {
+    
 }
 
 
