@@ -1,4 +1,3 @@
-let count = 1;
 let computer = 0;
 let player = 0
 
@@ -11,6 +10,10 @@ function getComputerChoice() {
 }
 
 function play(playerSelection, computerSelection) {
+    for (let count = 1; count < 5; count++) {
+        
+    }
+
     if (playerSelection === computerSelection) {
         // console.log("Computer " + (computer = 0));
         // console.log("Player " + (player = 0));
@@ -22,29 +25,35 @@ function play(playerSelection, computerSelection) {
     }
 
     if (playerSelection === 'rock' && computerSelection != 'scissors') {
-        console.log("Computer: " + (computer += count));
-        console.log("Player: " + (player = 0));
-        return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
+        return (computer += count);
+        // console.log("Computer: " + (computer += count));
+        // console.log("Player: " + (player = 0));
+        // return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
     }
     else if (playerSelection === 'paper' && computerSelection != 'rock') {
-        console.log("Computer: " + (computer += count));
-        console.log("Player: " + (player = 0));
-        return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`)
+        return (computer += count);
+        // console.log("Computer: " + (computer += count));
+        // console.log("Player: " + (player = 0));
+        // return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`)
 
 
     }
     else if (playerSelection === 'scissors' && computerSelection != 'paper') {
-        console.log("Computer: " + (computer += count));
+        return (computer += count);
+        /*console.log("Computer: " + (computer += count));
         console.log("Player: " + (player = 0));
-        return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
+        return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);*/
 
 
     }
     else {
-        console.log("Player: " + (player += count));
+        return (player += count)
+        /*console.log("Player: " + (player += count));
         console.log("Computer: " + (computer = 0));
-        return ("You win! " + `${playerSelection}` + " defeats " + `${computerSelection}`);
+        return ("You win! " + `${playerSelection}` + " defeats " + `${computerSelection}`); */
     }
+
+    
 
     
     
