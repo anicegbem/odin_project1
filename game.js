@@ -13,8 +13,6 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
 
     if (playerSelection === computerSelection) {
-        // console.log("Computer " + (computer = 0));
-        // console.log("Player " + (player = 0));
         return (
             'Tie game'
             
@@ -25,13 +23,12 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection === 'rock' && computerSelection !== 'scissors') {
         console.log("Computer: " + (computer += count));
         console.log("Player: " + (player += player));
-        // return (computer += count);
         return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
     }
+
     else if (playerSelection === 'paper' && computerSelection !== 'rock') {
         console.log("Computer: " + (computer += count));
         console.log("Player: " + (player += player));
-        // return (computer += count);
         return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`)
 
 
@@ -39,7 +36,6 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection === 'scissors' && computerSelection !== 'paper') {
         console.log("Computer: " + (computer += count));
         console.log("Player: " + (player += player));
-        // return (computer += count);
         return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
 
 
@@ -47,7 +43,7 @@ function playRound(playerSelection, computerSelection) {
     else {
         console.log("Player: " + (player += count));
         console.log("Computer: " + (computer += computer));
-        // return (player += count)
+    
         return ("You win! " + `${playerSelection}` + " defeats " + `${computerSelection}`);
     }
     
@@ -56,16 +52,6 @@ function playRound(playerSelection, computerSelection) {
   
 
 };
-
-/*function score(computer, player) {
-    let playerScore;
-    let computerScore;
-    return function add() {
-        playerScore += player;
-        computerScore += computer;
-    };
-} */
-
 
 
  
@@ -83,8 +69,6 @@ function game() {
 
     return results(computer, player);
    
-    
-    // return play(playerSelection, computerSelection);
 }
 
 function results(computer, player) {
@@ -98,18 +82,9 @@ function results(computer, player) {
 
 };
 
-function reset() {
-    computer = 0;
-    player = 0;
-}
 
 
 
 
-// const playerSelection = "rock";
-// const computerSelection = getComputerChoice();
 
-// console.log(play('rock', computerSelection))
 console.log(game());
-
-// console.log(getComputerChoice())
