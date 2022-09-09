@@ -27,7 +27,7 @@ function play(playerSelection, computerSelection) {
         console.log("Computer: " + (computer += count));
         console.log("Player: " + (player = 0));
         // return (computer += count);
-        return (computer);
+        return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
     }
     else if (playerSelection === 'paper' && computerSelection != 'rock') {
         console.log("Computer: " + (computer += count));
