@@ -1,5 +1,6 @@
 let computer = 0;
-let player = 0
+let player = 0;
+let count = 1;
 
 function getComputerChoice() {
     let options = {one: 'rock', two: 'paper', three: 'scissors'};
@@ -10,51 +11,58 @@ function getComputerChoice() {
 }
 
 function play(playerSelection, computerSelection) {
-    for (let count = 1; count < 5; count++) {
-        if (playerSelection === computerSelection) {
-            // console.log("Computer " + (computer = 0));
-            // console.log("Player " + (player = 0));
-            return (
-                'Tie game'
-                
+
+
+    if (playerSelection === computerSelection) {
+        // console.log("Computer " + (computer = 0));
+        // console.log("Player " + (player = 0));
+        return (
+            'Tie game'
+            
+
+        )
+    }
+
+    else if (playerSelection === 'rock' && computerSelection != 'scissors') {
+        console.log("Computer: " + (computer += count));
+        console.log("Player: " + (player = 0));
+        // return (computer += count);
+        return (computer);
+    }
+    else if (playerSelection === 'paper' && computerSelection != 'rock') {
+        console.log("Computer: " + (computer += count));
+        console.log("Player: " + (player = 0));
+        // return (computer += count);
+        return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`)
+
+
+    }
+    else if (playerSelection === 'scissors' && computerSelection != 'paper') {
+        console.log("Computer: " + (computer += count));
+        console.log("Player: " + (player = 0));
+        // return (computer += count);
+        return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
+
+
+    }
+    else {
+        console.log("Player: " + (player += count));
+        console.log("Computer: " + (computer = 0));
+        // return (player += count)
+        return ("You win! " + `${playerSelection}` + " defeats " + `${computerSelection}`);
+    }
+
     
-            )
-        }
-    
-        if (playerSelection === 'rock' && computerSelection != 'scissors') {
-            console.log("Computer: " + (computer += count));
-            console.log("Player: " + (player = 0));
-            return (computer += count);
-            // return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
-        }
-        else if (playerSelection === 'paper' && computerSelection != 'rock') {
-            console.log("Computer: " + (computer += count));
-            console.log("Player: " + (player = 0));
-            return (computer += count);
-            // return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`)
-    
-    
-        }
-        else if (playerSelection === 'scissors' && computerSelection != 'paper') {
-            console.log("Computer: " + (computer += count));
-            console.log("Player: " + (player = 0));
-            return (computer += count);
-            // return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
-    
-    
-        }
-        else {
-            console.log("Player: " + (player += count));
-            console.log("Computer: " + (computer = 0));
-            return (player += count)
-            // return ("You win! " + `${playerSelection}` + " defeats " + `${computerSelection}`);
-        }
+        
+        
+
+        
     
         
     
         
 
-    }
+    
   
 
 }
@@ -82,8 +90,10 @@ function game() {
 function results(computer, player) {
     if (player > computer) {
         console.log('You Won');
+    } else if (player === computer) {
+        console.log('Draw Game');
     } else {
-        console.log('You lost')
+        console.log('You Won');
     }
 
 };
