@@ -22,27 +22,27 @@ function playRound(playerSelection, computerSelection) {
 
     else if (playerSelection === 'rock' && computerSelection !== 'scissors') {
         console.log("Computer: " + (computer += count));
-        console.log("Player: " + (player += player));
+        console.log("Player: " + player);
         return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
     }
 
     else if (playerSelection === 'paper' && computerSelection !== 'rock') {
         console.log("Computer: " + (computer += count));
-        console.log("Player: " + (player += player));
+        console.log("Player: " + player);
         return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`)
 
 
     }
     else if (playerSelection === 'scissors' && computerSelection !== 'paper') {
         console.log("Computer: " + (computer += count));
-        console.log("Player: " + (player += player));
+        console.log("Player: " + player);
         return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
 
 
     }
     else {
         console.log("Player: " + (player += count));
-        console.log("Computer: " + (computer += computer));
+        console.log("Computer: " + computer);
     
         return ("You win! " + `${playerSelection}` + " defeats " + `${computerSelection}`);
     }
