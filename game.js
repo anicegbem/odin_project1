@@ -57,11 +57,10 @@ function playRound(playerSelection, computerSelection) {
  
 function game() {
     for(let i = 0; i < 5; i++) {
-        playerSelection = prompt("Enter either rock, paper or scissors");
-        playerSelection.toLowerCase();
-        computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        continue;
+        console.log(oneRound());
+        
+        // console.log(playRound(input, computerchoice));
+        
         
         
         
@@ -80,6 +79,14 @@ function results(computer, player) {
         console.log('You Lose');
     }
 
+};
+
+
+function oneRound() {
+    let input = prompt("Enter either rock, paper or scissors");
+    input = input.toLowerCase();
+    computerchoice = getComputerChoice();
+    return playRound(input, computerchoice);
 };
 
 
