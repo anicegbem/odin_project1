@@ -94,4 +94,4 @@ function oneRound() {
 
 
 
-console.log(game());
+game();
