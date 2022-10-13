@@ -1,6 +1,7 @@
 let computer = 0;
 let player = 0;
 let count = 1;
+let buttons = document.querySelectorAll('button');
 
 function getComputerChoice() {
     let options = {one: 'rock', two: 'paper', three: 'scissors'};
@@ -56,17 +57,33 @@ function playRound(playerSelection, computerSelection) {
 
  
 function game() {
-    for(let i = 0; i < 5; i++) {
-        console.log(oneRound());
+    // const rock = document.getElementById("rock");
+    buttons.forEach(button => {
+        button.addEventListener('click', function oneRound() {
+            let input = button.textContent;
+            let computerchoice = getComputerChoice();
+            console.log(playRound(input, computerchoice));
+
+        })
+            
+        
+
+
+    })
+        
+        
+        // console.log(oneRound());
         
         // console.log(playRound(input, computerchoice));
-        
-        
-        
-        
-    }
 
-    return results(computer, player);
+        
+        
+        
+        
+        
+    
+
+    // return results(computer, player);
    
 }
 
@@ -82,15 +99,27 @@ function results(computer, player) {
 };
 
 
-function oneRound() {
-    let input = prompt("Enter either rock, paper or scissors");
-    input = input.toLowerCase();
-    computerchoice = getComputerChoice();
+/*function oneRound() {
+    let input = buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            console.log();
+
+        })
+    }
+        
+    );
+    let computerchoice = getComputerChoice();
     return playRound(input, computerchoice);
-};
+}*/
 
 
-
+/*buttons.forEach(button => {
+    button.addEventListener('click', function oneRound() {
+        let input = button.textContent;
+        computerchoice = getComputerChoice();
+        playRound(input, computerchoice);
+    })
+})*/
 
 
 
