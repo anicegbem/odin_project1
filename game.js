@@ -1,7 +1,7 @@
+let buttons = document.querySelectorAll('button');
 let computer = 0;
 let player = 0;
-let count = 1;
-let buttons = document.querySelectorAll('button');
+
 
 function getComputerChoice() {
     let options = {one: 'rock', two: 'paper', three: 'scissors'};
@@ -12,78 +12,69 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    let result = " ";
 
     if (playerSelection === computerSelection) {
-        return (
-            'Tie game'
-            
-
-        )
+        result = "Tie game "+ '<br>' + "Computer: " + computer + "<br> Player: " + player;
+        
+        
+        
+        
     }
 
     else if (playerSelection === 'rock' && computerSelection !== 'scissors') {
-        console.log("Computer: " + (computer += count));
-        console.log("Player: " + player);
-        return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
+        computer += 1
+        result = ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}` + 
+        "<br>Computer: " + computer + "<br> Player: " + player);
+        
     }
 
     else if (playerSelection === 'paper' && computerSelection !== 'rock') {
-        console.log("Computer: " + (computer += count));
-        console.log("Player: " + player);
-        return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`)
+        computer += 1;
+        result = ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}` + 
+        "<br>Computer: " + computer + "<br>Player: " + player);
+        
 
 
     }
     else if (playerSelection === 'scissors' && computerSelection !== 'paper') {
-        console.log("Computer: " + (computer += count));
-        console.log("Player: " + player);
-        return ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}`);
+        computer += 1;
+        result = ("You lose! " + `${computerSelection}` + " defeats " + `${playerSelection}` + 
+        "<br>Computer: " + computer + "<br>Player: " + player);
+        
 
 
     }
     else {
-        console.log("Player: " + (player += count));
-        console.log("Computer: " + computer);
-    
-        return ("You win! " + `${playerSelection}` + " defeats " + `${computerSelection}`);
+        player += 1;
+        result = ("You win! " + `${playerSelection}` + " defeats " + `${computerSelection}` + 
+        "<br>Computer: " + computer + "<br>Player: " + player);
+        
     }
-    
-    
-    
+
+    document.getElementById("result").innerHTML = result;
+    return;
   
 
 };
 
 
+
+
  
 function game() {
-    // const rock = document.getElementById("rock");
     buttons.forEach(button => {
         button.addEventListener('click', function oneRound() {
             let input = button.textContent;
             let computerchoice = getComputerChoice();
-            console.log(playRound(input, computerchoice));
+            playRound(input, computerchoice);
 
-        })
+        });
             
         
 
 
-    })
-        
-        
-        // console.log(oneRound());
-        
-        // console.log(playRound(input, computerchoice));
-
-        
-        
-        
-        
-        
-    
-
-    // return results(computer, player);
+    });
    
 }
 
@@ -98,28 +89,6 @@ function results(computer, player) {
 
 };
 
-
-/*function oneRound() {
-    let input = buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            console.log();
-
-        })
-    }
-        
-    );
-    let computerchoice = getComputerChoice();
-    return playRound(input, computerchoice);
-}*/
-
-
-/*buttons.forEach(button => {
-    button.addEventListener('click', function oneRound() {
-        let input = button.textContent;
-        computerchoice = getComputerChoice();
-        playRound(input, computerchoice);
-    })
-})*/
 
 
 
