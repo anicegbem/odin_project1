@@ -52,6 +52,17 @@ function playRound(playerSelection, computerSelection) {
         
     }
 
+    if (computer === 5 || player === 5) {
+        buttons.forEach(button => {
+            button.disabled = true;
+        })
+        if(computer > player) {
+            result += "<br> You lose. Play Again";
+        } else if (computer < player) {
+            result += "<br> You win! Good Job";
+        }
+    }
+
     document.getElementById("result").innerHTML = result;
     return;
   
@@ -78,16 +89,6 @@ function game() {
    
 }
 
-function results(computer, player) {
-    if (player > computer) {
-        console.log('You Won');
-    } else if (player === computer) {
-        console.log('Draw Game');
-    } else {
-        console.log('You Lose');
-    }
-
-};
 
 
 
