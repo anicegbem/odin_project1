@@ -1,0 +1,21 @@
+body {
+    background-color: pink;
+    font-size: large;
+    font-family:'Times New Roman', Times, serif;
+}
+
+#container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+button {
+    margin-top: 5em;
+    margin-right: 1.25em;
+    margin-bottom: 1.5em;
+}
+
+a {
+    display: none;
+}

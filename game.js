@@ -55,12 +55,14 @@ function playRound(playerSelection, computerSelection) {
     if (computer === 5 || player === 5) {
         buttons.forEach(button => {
             button.disabled = true;
-        })
+        });
         if(computer > player) {
             result += "<br> You lose. Play Again";
         } else if (computer < player) {
             result += "<br> You win! Good Job";
         }
+        let reload = document.getElementById('reload');
+        reload.style.display = "inline-block";
     }
 
     document.getElementById("result").innerHTML = result;
